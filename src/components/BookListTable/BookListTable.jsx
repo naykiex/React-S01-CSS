@@ -11,7 +11,7 @@ import axios from "axios";
 
 function BookListTable({ books }) {
     const view = async (id) => {
-        await axios.get(`https://node41091-noderest.proen.app.ruk-com.cloud/books/${id}`)
+        await axios.get(`https://node57202-punnatheenoderest.proen.app.ruk-com.cloud/books/${id}`)
             .then((resp) => alert(`Book title: ${resp.data.title}\nAuthor of book: ${resp.data.author}`))
             .catch((err) => console.error(err));
 
@@ -19,7 +19,7 @@ function BookListTable({ books }) {
     }
 
     const deleted = async (book) => {
-        await axios.delete(`https://node41091-noderest.proen.app.ruk-com.cloud/books/${book.id}`)
+        await axios.delete(`https://node57202-punnatheenoderest.proen.app.ruk-com.cloud/books/${book.id}`)
             .then((resp) => {
                 if (resp.status == 200) {
                     alert(`${book.title} was deleted.`);
